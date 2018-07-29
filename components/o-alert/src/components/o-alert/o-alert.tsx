@@ -10,12 +10,14 @@ export class OAlertComponent {
 
   @Prop() align: string = 'center' // left,right,center ;
   @Prop() type: string = 'default' //default, error, warning , info , success;
-  @Prop() size: string = 'md' // sm , md , lg
+  @Prop() close: boolean = false // sm , md , lg
 
   render() {
 
     const typeClasses : CssClassMap = {
       'o-alert' : true,
+      'o-alert-align-center' : this.align === 'center',
+      'o-alert-align-left' : this.align === 'left',
       'o-alert-default': this.type === 'default',
       'o-alert-error': this.type === 'error',
       'o-alert-warning': this.type === 'warning',
@@ -25,7 +27,9 @@ export class OAlertComponent {
 
     return (
       <div class={typeClasses} role="alert">
-          <slot></slot>
+            <slot name="start"></slot>
+            <slot></slot>
+            <slot name="end"></slot>
       </div>
     );
   }

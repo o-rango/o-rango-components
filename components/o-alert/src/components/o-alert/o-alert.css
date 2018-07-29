@@ -1,30 +1,80 @@
 :host {
+ /* Generic Colors variables*/
  --o-alert-default: #FAFBFC;
  --o-alert-error : #DE350B;
  --o-alert-warning:#FFC400;
  --o-alert-info:  #0065FF;
  --o-alert-success:#36B37E;
+
+ /* Size Style variables  */
+ /* Font Style variables  */
+ --o-alert-height : 2.5em;
+ --o-alert-font-size : 14px;
+ --o-alert-font-weight : 600;
+ --o-alert-font-family : Arial, Helvetica, sans-serif;
+ --o-alert-font-color-light : #FFFFFF;
+ --o-alert-font-color-dark : #091E42;
 }
 
+::slotted([slot=start]) {
+  order: 0;
+  position: absolute;
+  left: 1em;
+
+}
+
+::slotted([slot=end]) {
+  order: 3;
+  position: absolute;
+  right: 1em;
+}
+
+
 .o-alert {
+  display: flex;
+  flex-flow: row wrap;
+  align-items:center;
   width: 100%;
-  height: 4em;
-  margin: auto auto;
+  height: var(--o-alert-height);
+  margin: 0.2em;
+  padding : 0.5em;
   box-shadow: rgba(67, 90, 111, 0.135) 0px 0px 0px 1px inset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: var(--o-alert-font-weight);
+  font-family: var( --o-alert-font-family);
+  font-size: var( --o-alert-font-size);
+  transition: color 0.25s ease-in-out 0s;
+}
+.o-alert-align-center{
+  justify-content: center;
+}
+.o-alert-align-left{
+  justify-content:flex-start;
 }
 
 .o-alert-default {
   background-color:  var(--o-alert-default);
+  color : var(--o-alert-font-color-dark );
 }
+
 .o-alert-error {
- background-color:  var(--o-alert-error)
+ background-color:  var(--o-alert-error);
+ color : var(--o-alert-font-color-light );
 }
+
 .o-alert-warning{
- background-color:  var( --o-alert-warning)
+ background-color:  var( --o-alert-warning);
+ color : var(--o-alert-font-color-dark );
 }
+
 .o-alert-info {
- background-color:  var( --o-alert-info)
+ background-color:  var( --o-alert-info);
+ color : var(--o-alert-font-color-light );
 }
+
 .o-alert-success{
- background-color:  var( --o-alert-success)
+ background-color:  var( --o-alert-success);
+ color : var(--o-alert-font-color-light );
 }
+
