@@ -1,1 +1,30 @@
+:host {
+ --o-alert-default: #FAFBFC;
+ --o-alert-error : #DE350B;
+ --o-alert-warning:#FFC400;
+ --o-alert-info:  #0065FF;
+ --o-alert-success:#36B37E;
+}
 
+.o-alert {
+  width: 100%;
+  height: 4em;
+  margin: auto auto;
+  box-shadow: rgba(67, 90, 111, 0.135) 0px 0px 0px 1px inset;
+}
+
+.o-alert-default {
+  background-color:  var(--o-alert-default);
+}
+.o-alert-error {
+ background-color:  var(--o-alert-error)
+}
+.o-alert-warning{
+ background-color:  var( --o-alert-warning)
+}
+.o-alert-info {
+ background-color:  var( --o-alert-info)
+}
+.o-alert-success{
+ background-color:  var( --o-alert-success)
+}
