@@ -16,6 +16,13 @@
  --o-alert-font-color-dark : #091E42;
 }
 
+.wrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 1em 0 1em;
+}
+
 ::slotted([slot=start]) {
   order: 0;
   position: absolute;
@@ -36,21 +43,23 @@
   align-items:center;
   width: 100%;
   height: var(--o-alert-height);
-  margin: 0.2em;
-  padding : 0.5em;
   box-shadow: rgba(67, 90, 111, 0.135) 0px 0px 0px 1px inset;
-  overflow: hidden;
-  text-overflow: ellipsis;
   font-weight: var(--o-alert-font-weight);
   font-family: var( --o-alert-font-family);
   font-size: var( --o-alert-font-size);
   transition: color 0.25s ease-in-out 0s;
+  text-align: center;
 }
+
+
 .o-alert-align-center{
+  margin: auto;
   justify-content: center;
+  text-align: center;
 }
 .o-alert-align-left{
   justify-content:flex-start;
+  text-align: left;
 }
 
 .o-alert-default {
@@ -77,4 +86,3 @@
  background-color:  var( --o-alert-success);
  color : var(--o-alert-font-color-light );
 }
-

@@ -16,8 +16,6 @@ export class OAlertComponent {
 
     const typeClasses : CssClassMap = {
       'o-alert' : true,
-      'o-alert-align-center' : this.align === 'center',
-      'o-alert-align-left' : this.align === 'left',
       'o-alert-default': this.type === 'default',
       'o-alert-error': this.type === 'error',
       'o-alert-warning': this.type === 'warning',
@@ -25,10 +23,16 @@ export class OAlertComponent {
       'o-alert-success': this.type === 'success',
     }
 
+    const alignClasses : CssClassMap = {
+      'wrap' : true,
+      'o-alert-align-center' : this.align === 'center',
+      'o-alert-align-left' : this.align === 'left',
+    }
+
     return (
       <div class={typeClasses} role="alert">
             <slot name="start"></slot>
-            <slot></slot>
+            <span class={alignClasses}><slot></slot></span>
             <slot name="end"></slot>
       </div>
     );
