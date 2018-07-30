@@ -10,7 +10,6 @@ export class OAlertComponent {
 
   @Prop() align: string = 'center' // left,right,center ;
   @Prop() type: string = 'default' //default, error, warning , info , success;
-  @Prop() close: boolean = false // sm , md , lg
 
   render() {
 

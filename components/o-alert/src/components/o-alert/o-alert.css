@@ -8,8 +8,8 @@
 
  /* Size Style variables  */
  /* Font Style variables  */
- --o-alert-height : 2.5em;
- --o-alert-font-size : 14px;
+ --o-alert-height : 3.5em;
+ --o-alert-font-size :14px;
  --o-alert-font-weight : 600;
  --o-alert-font-family : Arial, Helvetica, sans-serif;
  --o-alert-font-color-light : #FFFFFF;
@@ -29,7 +29,6 @@
   left: 1em;
 
 }
-
 ::slotted([slot=end]) {
   order: 3;
   position: absolute;
@@ -86,3 +85,4 @@
  background-color:  var( --o-alert-success);
  color : var(--o-alert-font-color-light );
 }
+
