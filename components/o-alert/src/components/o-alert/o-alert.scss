@@ -16,13 +16,6 @@
  --o-alert-font-color-dark : #091E42;
 }
 
-.wrap {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  padding: 0 1em 0 1em;
-}
-
 ::slotted([slot=start]) {
   order: 0;
   position: absolute;
@@ -35,6 +28,12 @@
   right: 1em;
 }
 
+.wrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 1em 0 1em;
+}
 
 .o-alert {
   display: flex;
@@ -48,41 +47,39 @@
   font-size: var( --o-alert-font-size);
   transition: color 0.25s ease-in-out 0s;
   text-align: center;
-}
-
-
-.o-alert-align-center{
-  margin: auto;
-  justify-content: center;
-  text-align: center;
-}
-.o-alert-align-left{
-  justify-content:flex-start;
-  text-align: left;
-}
-
-.o-alert-default {
   background-color:  var(--o-alert-default);
-  color : var(--o-alert-font-color-dark );
+
+  .o-alert-align-center{
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+  }
+  .o-alert-align-left{
+    justify-content:flex-start;
+    text-align: left;
+  }
 }
 
-.o-alert-error {
- background-color:  var(--o-alert-error);
- color : var(--o-alert-font-color-light );
+.o-alert-text-light {
+  color : var(--o-alert-font-color-light);
+}
+.o-alert-text-dark {
+  color : var(--o-alert-font-color-dark);
 }
 
-.o-alert-warning{
- background-color:  var( --o-alert-warning);
- color : var(--o-alert-font-color-dark );
+@each $type in 'default' 'error' 'warning' 'info' 'success' {
+  .o-alert-line-#{$type}:before {
+    content: "";
+    width: 0.3em;
+    height: var(--o-alert-height);
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color:  var(--o-alert-#{$type});
+  }
+  .o-alert-#{$type} {
+    background-color:  var(--o-alert-#{$type});
+  }
 }
 
-.o-alert-info {
- background-color:  var( --o-alert-info);
- color : var(--o-alert-font-color-light );
-}
-
-.o-alert-success{
- background-color:  var( --o-alert-success);
- color : var(--o-alert-font-color-light );
-}
 

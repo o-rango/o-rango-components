@@ -11,10 +11,10 @@
   <o-demo-bar name="Demo o-alert">
       <o-demo-case name="Simple">
         <template>
-        <script async="" src="/build/o-alert.js"></script>
+        <script src="/build/o-alert.js"></script>
 
         <br>
-        <o-alert align="center" type="default">This is an default alert banner !!!!</o-alert>
+        <o-alert  align="center" type="default">This is an default alert banner !!!!</o-alert>
         <br>
         <o-alert align="left" type="success">This is an success alert banner</o-alert>
         <br>
@@ -27,12 +27,23 @@
         </template>
       </o-demo-case>
 
-      <o-demo-case name="Dismiss">
+      <o-demo-case name="With Line">
         <template>
-        <script async="" src="/build/o-alert.js"></script>
-        <o-alert></o-alert>
+        <script src="/build/o-alert.js"></script>
+
+        <br>
+        <o-alert line  align="center" type="default">This is an default alert banner !!!!</o-alert>
+        <br>
+        <o-alert line align="left" type="success">This is an success alert banner</o-alert>
+        <br>
+        <o-alert line type="info">This is an success info alert banner</o-alert>
+        <br>
+        <o-alert line type="warning">This is an warning alert banner</o-alert>
+        <br>
+        <o-alert line type="error" align="center">This is an error alert banner <div slot="start"> Start</div><div slot="end">X</div> </o-alert>
+
         </template>
-    </o-demo-case>
+      </o-demo-case>
   </o-demo-bar>
 </body>
 </html>

@@ -31,6 +31,7 @@ declare global {
   namespace StencilComponents {
     interface OAlert {
       'align': string;
+      'line': boolean;
       'type': string;
     }
   }
@@ -55,6 +56,7 @@ declare global {
   namespace JSXElements {
     export interface OAlertAttributes extends HTMLAttributes {
       'align'?: string;
+      'line'?: boolean;
       'type'?: string;
     }
   }
