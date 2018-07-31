@@ -32,6 +32,7 @@ declare global {
     interface OAlert {
       'align': string;
       'line': boolean;
+      'name': string;
       'type': string;
     }
   }
@@ -57,6 +58,9 @@ declare global {
     export interface OAlertAttributes extends HTMLAttributes {
       'align'?: string;
       'line'?: boolean;
+      'name'?: string;
+      'onOAlertDestroyed'?: (event: CustomEvent) => void;
+      'onOAlertLoad'?: (event: CustomEvent) => void;
       'type'?: string;
     }
   }
