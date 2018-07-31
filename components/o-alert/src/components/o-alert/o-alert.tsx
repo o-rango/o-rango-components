@@ -1,4 +1,4 @@
-import { Component , Prop ,Element} from '@stencil/core';
+import { Component , Prop} from '@stencil/core';
 import {CssClassMap} from './utils'
 
 @Component({
@@ -7,27 +7,21 @@ import {CssClassMap} from './utils'
   shadow: true
 })
 export class OAlertComponent {
-  @Element() el : HTMLElement;
   @Prop() align: string = 'center' // left,right,center ;
   @Prop() type: string = 'default' //default, error, warning , info , success;
   @Prop() line: boolean= false;
 
   render() {
+    const types = ['info', 'success','warning','error','default'];
+
+    const cssClassName = types.includes(this.type) && this.line ? `o-alert-line-${this.type}`
+                                                                : `o-alert-${this.type}`;
 
     const typeClasses : CssClassMap = {
       'o-alert' : true,
-      'o-alert-text-light' : ['info' ,'success'].includes(this.type) && !this.line,
-      'o-alert-text-dark' :['default','warning','error'].includes(this.type) || this.line,
-      'o-alert-line-default': this.type === 'default' && this.line,
-      'o-alert-line-error': this.type === 'error'&& this.line,
-      'o-alert-line-warning': this.type === 'warning'&& this.line,
-      'o-alert-line-info': this.type === 'info'&& this.line,
-      'o-alert-line-success': this.type === 'success'&& this.line,
-      'o-alert-default': this.type === 'default' && !this.line,
-      'o-alert-error': this.type === 'error' && !this.line,
-      'o-alert-warning': this.type === 'warning' && !this.line,
-      'o-alert-info': this.type === 'info' && !this.line,
-      'o-alert-success': this.type === 'success' && !this.line,
+      'o-alert-text-light' : types.slice(0,2).includes(this.type) && !this.line,
+      'o-alert-text-dark'  : types.slice(2,5).includes(this.type) || this.line,
+      ... {[cssClassName]:true }
     }
 
     const alignClasses : CssClassMap = {
