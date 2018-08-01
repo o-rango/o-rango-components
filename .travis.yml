@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - 8
+  - 9
+branches:
+  only:
+    - master
+    - release
+    - beta
+install:
+  - npm i 
+  - npm run init
+  - npm run build --prod
+  - npm run test:ci
+  - npm run coverage
+script:
+  - npm run publish:$TRAVIS_BRANCH
