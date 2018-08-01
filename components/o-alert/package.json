@@ -1,6 +1,6 @@
 {
   "name": "@o-rango/o-alert",
-  "version": "0.0.1-beta.3",
+  "version": "0.0.1-beta.4",
   "description": "@o-rango/o-alert",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
@@ -9,6 +9,9 @@
   "files": [
     "dist/"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
