@@ -16,6 +16,7 @@
     "build": "stencil build",
     "start": "stencil build --dev --watch --serve",
     "test": "jest",
+    "test:ci": "jest --ci",
     "test.watch": "jest --watch"
   },
   "devDependencies": {
