@@ -1,6 +1,6 @@
 {
   "name": "@o-rango/o-alert",
-  "version": "0.0.1-beta.0",
+  "version": "0.0.1-beta.1",
   "description": "@o-rango/o-alert",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
@@ -40,5 +40,6 @@
       "json",
       "jsx"
     ]
-  }
+  },
+  "gitHead": "12ae572a54800df24d2e4370f6f9e23952cdceab"
 }
