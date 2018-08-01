@@ -59,8 +59,6 @@ declare global {
       'align'?: string;
       'line'?: boolean;
       'name'?: string;
-      'onOAlertDestroyed'?: (event: CustomEvent) => void;
-      'onOAlertLoad'?: (event: CustomEvent) => void;
       'type'?: string;
     }
   }
