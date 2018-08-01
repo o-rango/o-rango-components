@@ -9,7 +9,6 @@ branches:
     - release
     - beta
 install:
-  - travis setup npm
   - npm i 
   - npm run init
   - npm run build --prod
