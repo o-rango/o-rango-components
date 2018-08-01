@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.0.1-beta.5"></a>
+## [0.0.1-beta.5](https://github.com/ionic-team/stencil-component-starter/compare/@o-rango/o-alert@0.0.1-beta.4...@o-rango/o-alert@0.0.1-beta.5) (2018-08-01)
+
+
+### Features
+
+* **o-alert:** docs ([6294947](https://github.com/ionic-team/stencil-component-starter/commit/6294947))
+* **o-alert:** update docs and font-family ([32830db](https://github.com/ionic-team/stencil-component-starter/commit/32830db))
+
+
+
+
+
 <a name="0.0.1-beta.4"></a>
 ## [0.0.1-beta.4](https://github.com/ionic-team/stencil-component-starter/compare/@o-rango/o-alert@0.0.1-beta.3...@o-rango/o-alert@0.0.1-beta.4) (2018-08-01)
 
