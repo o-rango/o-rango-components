@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.0.1-unstable.0"></a>
+## [0.0.1-unstable.0](https://github.com/ionic-team/stencil-component-starter/compare/@o-rango/o-alert@0.0.1-beta.5...@o-rango/o-alert@0.0.1-unstable.0) (2018-08-01)
+
+
+### Features
+
+* **o-alert:** add small tests ([8b9e7bd](https://github.com/ionic-team/stencil-component-starter/commit/8b9e7bd))
+* **o-alert:** update stencil ([6c7fcac](https://github.com/ionic-team/stencil-component-starter/commit/6c7fcac))
+
+
+
+
+
 <a name="0.0.1-beta.5"></a>
 ## [0.0.1-beta.5](https://github.com/ionic-team/stencil-component-starter/compare/@o-rango/o-alert@0.0.1-beta.4...@o-rango/o-alert@0.0.1-beta.5) (2018-08-01)
 
