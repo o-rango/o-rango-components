@@ -1,0 +1,49 @@
+{
+  "name": "@o-rango/o-button",
+  "version": "0.0.0",
+  "description": "@o-rango/o-button",
+  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "files": [
+    "dist/"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "stencil build",
+    "start": "stencil build --dev --watch --serve",
+    "test": "jest",
+    "test.watch": "jest --watch"
+  },
+  "devDependencies": {
+    "@stencil/core": "^0.11.0",
+    "@stencil/sass": "0.1.0",
+    "@types/jest": "^23.3.1",
+    "jest": "^23.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionic-team/stencil-component-starter.git"
+  },
+  "author": "@o-rango",
+  "license": "MIT",
+  "homepage": "https://o-rango.github.io/",
+  "jest": {
+    "collectCoverage": true,
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
+  },
+  "gitHead": "2936be651042bb20b998bc8bf40418799b604317"
+}

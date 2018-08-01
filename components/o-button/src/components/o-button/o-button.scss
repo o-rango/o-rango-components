@@ -1,0 +1,84 @@
+:host {
+ /* Generic Colors variables*/
+ --o-button-default: #FAFBFC;
+ --o-button-error : #DE350B;
+ --o-button-warning:#FFC400;
+ --o-button-info:  #0065FF;
+ --o-button-success:#36B37E;
+
+ /* Size Style variables  & Font Style variables */
+ --o-button-height : 3.5em;
+ --o-button-font-size :14px;
+ --o-button-font-weight : 600;
+ --o-button-font-family : 'San Francisco', -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', 'Helvetica Neue', Helvetica, sans-serif;
+ --o-button-font-color-light : #FFFFFF;
+ --o-button-font-color-dark : #091E42;
+}
+
+::slotted([slot=start]) {
+  order: 0;
+  position: absolute;
+  left: 1em;
+
+}
+::slotted([slot=end]) {
+  order: 3;
+  position: absolute;
+  right: 1em;
+}
+
+.wrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 1em 0 1em;
+}
+
+.o-button {
+  display: flex;
+  flex-flow: row wrap;
+  align-items:center;
+  width: 100%;
+  height: var(--o-button-height);
+  box-shadow: rgba(67, 90, 111, 0.135) 0px 0px 0px 1px inset;
+  font-weight: var(--o-button-font-weight);
+  font-family: var( --o-button-font-family);
+  font-size: var( --o-button-font-size);
+  transition: color 0.25s ease-in-out 0s;
+  text-align: center;
+  background-color:  var(--o-button-default);
+
+  .o-button-align-center{
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+  }
+  .o-button-align-left{
+    justify-content:flex-start;
+    text-align: left;
+  }
+}
+
+.o-button-text-light {
+  color : var(--o-button-font-color-light);
+}
+.o-button-text-dark {
+  color : var(--o-button-font-color-dark);
+}
+
+@each $type in 'default' 'error' 'warning' 'info' 'success' {
+  .o-button-line-#{$type}:before {
+    content: "";
+    width: 0.3em;
+    height: var(--o-button-height);
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color:  var(--o-button-#{$type});
+  }
+  .o-button-#{$type} {
+    background-color:  var(--o-button-#{$type});
+  }
+}
+
+

@@ -29,37 +29,31 @@ declare global {
 declare global {
 
   namespace StencilComponents {
-    interface OAlert {
-      'align': string;
-      'line': boolean;
-      'name': string;
-      'type': string;
+    interface OButton {
+
     }
   }
 
-  interface HTMLOAlertElement extends StencilComponents.OAlert, HTMLStencilElement {}
+  interface HTMLOButtonElement extends StencilComponents.OButton, HTMLStencilElement {}
 
-  var HTMLOAlertElement: {
-    prototype: HTMLOAlertElement;
-    new (): HTMLOAlertElement;
+  var HTMLOButtonElement: {
+    prototype: HTMLOButtonElement;
+    new (): HTMLOButtonElement;
   };
   interface HTMLElementTagNameMap {
-    'o-alert': HTMLOAlertElement;
+    'o-button': HTMLOButtonElement;
   }
   interface ElementTagNameMap {
-    'o-alert': HTMLOAlertElement;
+    'o-button': HTMLOButtonElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      'o-alert': JSXElements.OAlertAttributes;
+      'o-button': JSXElements.OButtonAttributes;
     }
   }
   namespace JSXElements {
-    export interface OAlertAttributes extends HTMLAttributes {
-      'align'?: string;
-      'line'?: boolean;
-      'name'?: string;
-      'type'?: string;
+    export interface OButtonAttributes extends HTMLAttributes {
+
     }
   }
 }
