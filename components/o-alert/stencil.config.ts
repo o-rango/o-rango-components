@@ -1,5 +1,8 @@
-const sass = require('@stencil/sass');
-exports.config = {
+
+import { Config } from '@stencil/core';
+import { sass } from '@stencil/sass';
+
+export const config: Config = {
   namespace: 'o-alert',
   plugins: [
     sass()

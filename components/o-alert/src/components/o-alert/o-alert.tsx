@@ -15,7 +15,6 @@ export class OAlertComponent {
 
   @Event() oAlertLoad: EventEmitter;
   oAlertLoadHandler(){
-    console.log('Emit');
     this.oAlertLoad.emit({name :name});
   }
   @Event() oAlertDestroyed : EventEmitter;

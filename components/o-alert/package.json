@@ -19,10 +19,10 @@
     "test.watch": "jest --watch"
   },
   "devDependencies": {
-    "@stencil/core": "^0.11.0-1",
-    "@stencil/sass": "0.0.5",
-    "@types/jest": "^21.1.1",
-    "jest": "^21.2.1"
+    "@stencil/core": "^0.11.0",
+    "@stencil/sass": "0.1.0",
+    "@types/jest": "^23.3.1",
+    "jest": "^23.4.2"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
   "license": "MIT",
   "homepage": "https://o-rango.github.io/",
   "jest": {
+    "collectCoverage": true,
     "transform": {
       "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
     },
