@@ -9,5 +9,5 @@ install:
   - npm run init
   - npm run build --prod
   - npm run test:ci
-  - npm run codecov
+  - npm run coverage
 script:
