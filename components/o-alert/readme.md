@@ -1,6 +1,7 @@
 # o-alert
 Provides feedback messages for  user actions with alert messages.
 
+[![Edit o-alert codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n7m2y31n44)
 
 ## Demo
 ![](./docs/o-alert_demo.gif)
