@@ -1,6 +1,6 @@
 // Hack For CssClassMap
 export type CssClassMap = { [className: string]: boolean };
-import { Component , Prop ,Event, EventEmitter} from '@stencil/core';
+import { Component , Prop} from '@stencil/core';
 
 @Component({
   tag: 'o-alert',
@@ -13,21 +13,6 @@ export class OAlertComponent {
   @Prop() type: string = 'default' //default, error, warning , info , success;
   @Prop() line: boolean= false;
 
-  @Event() oAlertLoad: EventEmitter;
-  oAlertLoadHandler(){
-    this.oAlertLoad.emit({name :name});
-  }
-  @Event() oAlertDestroyed : EventEmitter;
-  oAlertDestroyedHandler(){
-    this.oAlertDestroyed.emit({name :name});
-  }
-
-  componentDidLoad(){
-    this.oAlertLoadHandler();
-  }
-  componentDidUnload(){
-    this.oAlertDestroyedHandler();
-  }
 
   render() {
     const types = ['info', 'success','error','warning','default'];
