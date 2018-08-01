@@ -1,6 +1,8 @@
 # o-alert
 Provides feedback messages for  user actions with alert messages.
 
+[![Edit o-alert codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n7m2y31n44)
+
 
 ## Demo
 ![](./docs/o-alert_demo.gif)
@@ -11,9 +13,7 @@ First, npm install within the project or use it directly from CDN:
 ```
 npm install @o-rango/o-alert --save
 ```
-
 or
-
 ```html
 <script src="./node_modules/@o-rango/o-alert/dist/o-alert.js"></script>
 // OR
@@ -22,7 +22,7 @@ or
 
 ### Usage example 
 
-Simple
+Default Alert
 
 ```html
   // Default Alert
@@ -38,7 +38,7 @@ Simple
 ```
 
 
-With Line
+Alert with Line
 
 ```html
   // Success Alert aligned left
@@ -51,13 +51,37 @@ With Line
   </o-alert>
 ```
 
+
+
 Properties
 
-```html
+```js
 //o-content-alert
   @Prop() name?: string;
   @Prop() align: string = 'center' // left,right,center ;
   @Prop() type: string = 'default' //default, error, warning , info , success;
   @Prop() line: boolean= false;
+
+```
+
+
+### Customization 
+
+
+```css
+ /* Generic Colors variables*/
+ --o-alert-default: #FAFBFC;
+ --o-alert-error : #DE350B;
+ --o-alert-warning:#FFC400;
+ --o-alert-info:  #0065FF;
+ --o-alert-success:#36B37E;
+
+ /* Size Style variables  & Font Style variables */
+ --o-alert-height : 3.5em;
+ --o-alert-font-size :14px;
+ --o-alert-font-weight : 600;
+ --o-alert-font-family : 'San Francisco', -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', 'Helvetica Neue', Helvetica, sans-serif;
+ --o-alert-font-color-light : #FFFFFF;
+ --o-alert-font-color-dark : #091E42;
 
 ```
