@@ -1,6 +1,7 @@
 :host {
+  --o-alert-global-background-color: #FAFBFC;
  /* Generic Colors variables*/
- --o-alert-default: #FAFBFC;
+ --o-alert-default: #4a627b;
  --o-alert-error : #DE350B;
  --o-alert-warning:#FFC400;
  --o-alert-info:  #0065FF;
@@ -46,7 +47,7 @@
   font-size: var( --o-alert-font-size);
   transition: color 0.25s ease-in-out 0s;
   text-align: center;
-  background-color:  var(--o-alert-default);
+  background-color:  var(--o-alert-global-background-color);
 
   .o-alert-align-center{
     margin: auto;
