@@ -1,0 +1,11 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "components/o-alert/package.json",
+        "components/o-button/package.json",
+        "package.json"
+      ]
+    }
+  }
+}
