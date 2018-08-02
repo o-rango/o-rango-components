@@ -23,6 +23,7 @@ button {
   height: 2.5rem;
   padding: 0 1rem;
   cursor: pointer;
+  border-radius: 2px;
   background-position: center;
   transition: background 0.5s;
   display: inline-block;
@@ -51,19 +52,20 @@ button {
     width: 100%;
   }
 
+  &.rounded{
+    border-radius: 16rem;
+  }
+
   @each $type in 'default' 'error' 'warning' 'info' 'success' {
     &.solid-#{$type} {
       background: transparent;
       border: none;
-      border-radius: 2px;
       padding: 0.6em 0.8em;
       color: white;
       background-color:var(--o-button-#{$type});
     }
     &.outline-#{$type} {
       background: transparent;
-      font-size: 14px;
-      border-radius: 2px;
       padding: 0.6em 0.8em;
       border-style: solid;
       color:var(--o-button-#{$type});
@@ -72,8 +74,6 @@ button {
     }
     &.dashed-#{$type} {
       background: transparent;
-      font-size: 14px;
-      border-radius: 2px;
       padding: 0.6em 0.8em;
       border-style: dashed;
       color:var(--o-button-#{$type});

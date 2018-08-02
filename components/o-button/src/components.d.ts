@@ -34,7 +34,7 @@ declare global {
       'disabled': boolean;
       'fill': 'dashed' | 'outline' | 'solid';
       'href': string;
-      'shape': 'circle' | 'square';
+      'rounded': boolean;
       'size': string;
       'type': string;
     }
@@ -63,7 +63,7 @@ declare global {
       'disabled'?: boolean;
       'fill'?: 'dashed' | 'outline' | 'solid';
       'href'?: string;
-      'shape'?: 'circle' | 'square';
+      'rounded'?: boolean;
       'size'?: string;
       'type'?: string;
     }

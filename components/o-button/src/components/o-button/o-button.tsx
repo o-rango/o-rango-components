@@ -14,7 +14,7 @@ export class OButtonComponent {
   @Prop() href?: string;
   @Prop() block? : boolean = false;
   @Prop() type: string = 'default' //default, error, warning , info , success;
-  @Prop({ reflectToAttr: true }) shape?: 'circle' | 'square';
+  @Prop() rounded?: boolean = false;
   @Prop({ reflectToAttr: true }) disabled = false;
   @Prop({ reflectToAttr: true})  fill?: 'dashed' | 'outline' | 'solid' = 'solid';
 
@@ -42,6 +42,7 @@ export class OButtonComponent {
 
     const cssClasses : CssClassMap = {
           'block' : this.block,
+          'rounded' : this.rounded,
           [cssClassName] : true
     }
 
