@@ -46,10 +46,11 @@ export class OButtonComponent {
     }
 
     return (
-      <TagType class={cssClasses}
-      disabled={this.disabled}
-      >
-        <slot />
+      <TagType
+        class={cssClasses}
+        disabled={this.disabled}
+        >
+        <slot/>
       </TagType>
     );
   }

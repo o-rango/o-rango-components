@@ -1,7 +1,10 @@
 :host {
+
  /* Generic Colors variables*/
- --o-button-default: #FAFBFC;
+ --o-button-default: #4a627b;
+ --o-button-default-light : #a6b7c9;
  --o-button-error : #DE350B;
+ --o-button-error-light : #faac99;
  --o-button-warning:#FFC400;
  --o-button-info:  #0065FF;
  --o-button-success:#36B37E;
@@ -21,7 +24,7 @@ button {
   padding: 0 1rem;
   cursor: pointer;
   background-position: center;
-  transition: background 0.3s;
+  transition: background 0.5s;
   display: inline-block;
   font-weight:var(--o-button-font-weight);
   text-align: center;
@@ -44,7 +47,6 @@ button {
   transition-duration: 250ms;
   transition-timing-function: ease-in;
   white-space: nowrap;
-
   &.block{
     width: 100%;
   }
@@ -78,19 +80,19 @@ button {
       border-color:var(--o-button-#{$type});
       border-width: 1.5px;
     }
-    &:active {
+    &:hover {
+      filter: contrast(135%);
+    }
+    &:active{
+      filter: contrast(110%);
       background-size: 100%;
       transition: background 0s;
-    }
-    &:hover {
     }
   }
   &.disabled,
   &[disabled] {
     cursor: not-allowed;
-    > * {
-      pointer-events: none;
-    }
+    pointer-events: none;
     opacity: 0.7;
   }
 }
