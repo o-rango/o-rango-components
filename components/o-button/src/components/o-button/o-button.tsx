@@ -12,7 +12,8 @@ import { Component,Prop} from '@stencil/core';
 export class OButtonComponent {
   @Prop() size?: string; // lg - md - sm
   @Prop() href?: string;
-  @Prop() type: string = 'error' //default, error, warning , info , success;
+  @Prop() block? : boolean = false;
+  @Prop() type: string = 'default' //default, error, warning , info , success;
   @Prop({ reflectToAttr: true }) shape?: 'circle' | 'square';
   @Prop({ reflectToAttr: true }) disabled = false;
   @Prop({ reflectToAttr: true})  fill?: 'dashed' | 'outline' | 'solid' = 'solid';
@@ -37,10 +38,15 @@ export class OButtonComponent {
 
   render() {
     const TagType = this.href ? 'a' : 'button';
-    const cssClassName =  `ripple , ${this.fill}-${this.type}`;
+    const cssClassName =  `${this.fill}-${this.type}`;
+
+    const cssClasses : CssClassMap = {
+          'block' : this.block,
+          [cssClassName] : true
+    }
 
     return (
-      <TagType class={cssClassName}
+      <TagType class={cssClasses}
       disabled={this.disabled}
       >
         <slot />

@@ -9,7 +9,7 @@
  /* Size Style variables  & Font Style variables */
  --o-button-height : 3.5em;
  --o-button-font-size :14px;
- --o-button-font-weight : 400;
+ --o-button-font-weight : 600;
  --o-button-font-family : 'San Francisco', -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', 'Helvetica Neue', Helvetica, sans-serif;
  --o-button-font-color-light : #FFFFFF;
  --o-button-font-color-dark : #091E42;
@@ -17,18 +17,37 @@
 
 
 button {
+  height: 2.5rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  background-position: center;
+  transition: background 0.3s;
   display: inline-block;
   font-weight:var(--o-button-font-weight);
   text-align: center;
   touch-action: manipulation;
   background-image: none;
-  font-family: var( --o-button-font-family);
-  font-size: 14px;
+  font-family: var(--o-button-font-family);
+  font-size: var(--o-button-font-size);
+  line-height: 16px;
   text-transform: uppercase;
-  cursor: pointer;
   box-shadow: 0 0 4px #999;
-  padding: 0.6em 0.8em;
   outline: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in;
+  white-space: nowrap;
+
+  &.block{
+    width: 100%;
+  }
 
   @each $type in 'default' 'error' 'warning' 'info' 'success' {
     &.solid-#{$type} {
@@ -47,6 +66,7 @@ button {
       border-style: solid;
       color:var(--o-button-#{$type});
       border-color:var(--o-button-#{$type});
+      border-width: 1.5px;
     }
     &.dashed-#{$type} {
       background: transparent;
@@ -56,6 +76,13 @@ button {
       border-style: dashed;
       color:var(--o-button-#{$type});
       border-color:var(--o-button-#{$type});
+      border-width: 1.5px;
+    }
+    &:active {
+      background-size: 100%;
+      transition: background 0s;
+    }
+    &:hover {
     }
   }
   &.disabled,
@@ -67,45 +94,3 @@ button {
     opacity: 0.7;
   }
 }
-
-.ripple {
-  background-position: center;
-  transition: background 0.3s;
-}
-.ripple:hover {
-  background: #47a7f5
-}
-.ripple:active {
-  background-color: #6eb9f7;
-  background-size: 100%;
-  transition: background 0s;
-}
-
-/* Button style
-.ripple {
-  background-position: center;
-  transition: background 0.3s;
-}
-.ripple:hover {
-  background: #47a7f5
-}
-.ripple:active {
-  background-color: #6eb9f7;
-  background-size: 100%;
-  transition: background 0s;
-}
-button {
-  font-family: var( --o-button-font-family);
-  border: none;
-  border-radius: 5px;
-  padding: 0.6em 0.8em;
-  font-size: 14px;
-  text-transform: uppercase;
-  cursor: pointer;
-  color: white;
-  background-color: #2196f3;
-  box-shadow: 0 0 4px #999;
-  outline: none;
-}
-
-*/
