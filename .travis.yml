@@ -8,6 +8,7 @@ branches:
     - master
     - release
     - beta
+    - /^greenkeeper/.*$/
 install:
   - npm i 
   - npm run init
