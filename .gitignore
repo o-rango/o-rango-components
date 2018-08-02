@@ -1,3 +1,4 @@
 node_modules
 components/o-alert/coverage
 components/o-button/coverage
+.DS_Store
