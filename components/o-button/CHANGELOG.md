@@ -3,6 +3,15 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+<a name="0.0.1-unstable.1"></a>
+## [0.0.1-unstable.1](https://github.com/ionic-team/stencil-component-starter/compare/@o-rango/o-button@0.0.1-unstable.0...@o-rango/o-button@0.0.1-unstable.1) (2018-08-02)
+
+**Note:** Version bump only for package @o-rango/o-button
+
+
+
+
+
 <a name="0.0.1-unstable.0"></a>
 ## 0.0.1-unstable.0 (2018-08-02)
 
