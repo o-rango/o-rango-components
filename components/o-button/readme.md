@@ -1,8 +1,7 @@
 # @o-rango/button
 Provides feedback messages for  user actions with alert messages.
 
-[![Edit o-button codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n7m2y31n44)
-
+[![Edit o-button on codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/6yrk93qw23)
 ## Demo
 ![](./docs/o-button_demo.gif)
 

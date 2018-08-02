@@ -20,4 +20,4 @@
 | Component        | Status           | Sandbox                                               |
 | ---------------- |:----------------:| -----------------------------------------------------:|
 | o-alert          | :construction:   | [:link:](https://codesandbox.io/s/n7m2y31n44)         |
-| o-button         | :construction:   |                                                       |
+| o-button         | :construction:   | [:link:](https://codesandbox.io/s/6yrk93qw23)                                                      |
