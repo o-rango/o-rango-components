@@ -1,6 +1,6 @@
 {
   "name": "@o-rango/o-alert",
-  "version": "0.0.1-beta.5",
+  "version": "0.0.1-unstable.0",
   "description": "@o-rango/o-alert",
   "module": "dist/esm/index.js",
   "main": "dist/index.js",
@@ -21,8 +21,10 @@
   },
   "devDependencies": {
     "@stencil/core": "^0.11.0",
+    "@stencil/postcss": "^0.1.0",
     "@stencil/sass": "0.1.0",
     "@types/jest": "^23.3.1",
+    "autoprefixer": "^9.0.2",
     "jest": "^23.4.2"
   },
   "repository": {
