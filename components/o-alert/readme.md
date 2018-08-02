@@ -1,6 +1,6 @@
 # @o-rango/o-alert
 Provides feedback messages for  user actions with alert messages.
-
+[![npm version](https://badge.fury.io/js/%40o-rango%2Fo-alert.svg)](https://badge.fury.io/js/%40o-rango%2Fo-alert)
 [![Edit o-alert codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n7m2y31n44)
 
 ## Demo
@@ -65,7 +65,6 @@ Properties
 
 
 ### Customization 
-
 
 ```css
  /* Generic Colors variables*/
