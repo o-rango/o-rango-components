@@ -1,0 +1,98 @@
+:host {
+
+ /* Generic Colors variables*/
+ --o-button-default: #4a627b;
+ --o-button-default-light : #a6b7c9;
+ --o-button-error : #DE350B;
+ --o-button-error-light : #faac99;
+ --o-button-warning:#FFC400;
+ --o-button-info:  #0065FF;
+ --o-button-success:#36B37E;
+
+ /* Size Style variables  & Font Style variables */
+ --o-button-height : 3.5em;
+ --o-button-font-size :14px;
+ --o-button-font-weight : 600;
+ --o-button-font-family : 'San Francisco', -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', 'Helvetica Neue', Helvetica, sans-serif;
+ --o-button-font-color-light : #FFFFFF;
+ --o-button-font-color-dark : #091E42;
+}
+
+
+button {
+  height: 2.5rem;
+  padding: 0 1rem;
+  cursor: pointer;
+  background-position: center;
+  transition: background 0.5s;
+  display: inline-block;
+  font-weight:var(--o-button-font-weight);
+  text-align: center;
+  touch-action: manipulation;
+  background-image: none;
+  font-family: var(--o-button-font-family);
+  font-size: var(--o-button-font-size);
+  line-height: 16px;
+  text-transform: uppercase;
+  box-shadow: 0 0 4px #999;
+  outline: none;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in;
+  white-space: nowrap;
+  &.block{
+    width: 100%;
+  }
+
+  @each $type in 'default' 'error' 'warning' 'info' 'success' {
+    &.solid-#{$type} {
+      background: transparent;
+      border: none;
+      border-radius: 2px;
+      padding: 0.6em 0.8em;
+      color: white;
+      background-color:var(--o-button-#{$type});
+    }
+    &.outline-#{$type} {
+      background: transparent;
+      font-size: 14px;
+      border-radius: 2px;
+      padding: 0.6em 0.8em;
+      border-style: solid;
+      color:var(--o-button-#{$type});
+      border-color:var(--o-button-#{$type});
+      border-width: 1.5px;
+    }
+    &.dashed-#{$type} {
+      background: transparent;
+      font-size: 14px;
+      border-radius: 2px;
+      padding: 0.6em 0.8em;
+      border-style: dashed;
+      color:var(--o-button-#{$type});
+      border-color:var(--o-button-#{$type});
+      border-width: 1.5px;
+    }
+    &:hover {
+      filter: contrast(135%);
+    }
+    &:active{
+      filter: contrast(110%);
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.7;
+  }
+}
