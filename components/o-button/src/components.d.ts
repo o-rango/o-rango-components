@@ -30,7 +30,12 @@ declare global {
 
   namespace StencilComponents {
     interface OButton {
-
+      'disabled': boolean;
+      'fill': 'dashed' | 'outline' | 'solid';
+      'href': string;
+      'shape': 'circle' | 'square';
+      'size': string;
+      'type': string;
     }
   }
 
@@ -53,7 +58,12 @@ declare global {
   }
   namespace JSXElements {
     export interface OButtonAttributes extends HTMLAttributes {
-
+      'disabled'?: boolean;
+      'fill'?: 'dashed' | 'outline' | 'solid';
+      'href'?: string;
+      'shape'?: 'circle' | 'square';
+      'size'?: string;
+      'type'?: string;
     }
   }
 }

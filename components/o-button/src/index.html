@@ -1,50 +1,126 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
-  <title>o-button component</title>
-  <script async src="https://unpkg.com/@o-rango/orango-demo-tools/dist/orango-demo-tools.js"></script>
-</head>
-<body>
-  <o-demo-bar name="Demo o-button" events="'oAlertLoad' ,'oAlertDestroyed'">
-      <o-demo-case name="Simple">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <title>o-button component</title>
+    <script async src="https://unpkg.com/@o-rango/orango-demo-tools/dist/orango-demo-tools.js"></script>
+  </head>
+
+  <body>
+    <o-demo-bar name="Demo o-button" events="'oAlertLoad' ,'oAlertDestroyed'">
+      <o-demo-case name="Solid Button">
         <template>
-        <script src="/build/o-button.js"></script>
-
-        <br>
-        <o-button  align="center" type="default">This is an default alert banner !!!!</o-button>
-        <br>
-        <o-button align="left" type="success">This is an success alert banner</o-button>
-        <br>
-        <o-button type="info">This is an success info alert banner</o-button>
-        <br>
-        <o-button type="warning">This is an warning alert banner</o-button>
-        <br>
-        <o-button type="error" align="center">This is an error alert banner <div slot="start"> Start</div><div slot="end">X</div> </o-button>
-
+          <script src="/build/o-button.js"></script>
+          <br>
+          <br>
+          <p>
+            <o-button type="default" fill="solid">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="warning" fill="solid">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="error" fill="solid">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="success" fill="solid">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="info" fill="solid">Submit</o-button>
+          </p>
         </template>
       </o-demo-case>
 
-      <o-demo-case name="With Line">
+      <o-demo-case name="Outline Button">
         <template>
-        <script src="/build/o-button.js"></script>
-
-        <br>
-        <o-button line  align="center" type="default">This is an default alert banner !!!!</o-button>
-        <br>
-        <o-button line align="left" type="success">This is an success alert banner</o-button>
-        <br>
-        <o-button line type="info">This is an success info alert banner</o-button>
-        <br>
-        <o-button line type="warning">This is an warning alert banner</o-button>
-        <br>
-        <o-button line type="error" align="center">This is an error alert banner <div slot="start"> Start</div><div slot="end">X</div> </o-button>
-
+          <script src="/build/o-button.js"></script>
+          <br>
+          <br>
+          <p>
+            <o-button type="default" fill="outline">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="warning" fill="outline">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="error" fill="outline">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="success" fill="outline">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="info" fill="outline">Submit</o-button>
+          </p>
         </template>
       </o-demo-case>
-  </o-demo-bar>
-</body>
+
+
+      <o-demo-case name="Dashed Button">
+        <template>
+          <script src="/build/o-button.js"></script>
+          <br>
+          <br>
+          <p>
+            <o-button type="default" fill="dashed">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="warning" fill="dashed">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="error" fill="dashed">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="success" fill="dashed">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="info" fill="dashed">Submit</o-button>
+          </p>
+        </template>
+      </o-demo-case>
+
+
+      <o-demo-case name="Disabled Button">
+        <template>
+          <script src="/build/o-button.js"></script>
+          <br>
+          <br>
+          <p>
+            <o-button type="default" disabled fill="dashed">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="warning" disabled fill="dashed">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="error" disabled fill="dashed">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="success" disabled fill="dashed">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="info" disabled fill="dashed">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="default" disabled fill="solid">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="warning" disabled fill="solid">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="error" disabled fill="solid">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="success" disabled fill="solid">Submit</o-button>
+          </p>
+          <p>
+            <o-button type="info" disabled fill="solid">Submit</o-button>
+          </p>
+        </template>
+      </o-demo-case>
+
+
+    </o-demo-bar>
+  </body>
+
 </html>
-
-
