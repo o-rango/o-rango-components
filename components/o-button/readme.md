@@ -48,7 +48,6 @@ Properties
   @Prop({ reflectToAttr: true})  fill?: 'dashed' | 'outline' | 'solid' = 'solid';
 ```
 
-
 ### Customization 
 
 
