@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <title>o-input component</title>
+    <script async src="https://unpkg.com/@o-rango/orango-demo-tools/dist/orango-demo-tools.js"></script>
+  </head>
+
+  <body>
+    <o-demo-bar name="Demo o-input" events="'oAlertLoad' ,'oAlertDestroyed'">
+        <o-demo-case name="Link input">
+            <template>
+              <script src="/build/o-input.js"></script>
+              <br>
+              <br>
+              <p>
+                <o-input target="_blank" href="https://www.sapo.pt/" type="default" fill="solid">Submit</o-input>
+              </p>
+              <p>
+                <o-input href="https://www.sapo.pt/" type="warning" fill="solid">Submit</o-input>
+              </p>
+              <p>
+                <o-input href="https://www.sapo.pt/" type="error" fill="solid">Submit</o-input>
+              </p>
+              <p>
+                <o-input href="https://www.sapo.pt/" type="success" fill="solid">Submit</o-input>
+              </p>
+              <p>
+                <o-input href="https://www.sapo.pt/" type="info" fill="solid">Submit</o-input>
+              </p>
+
+              <p>
+                  <o-input disabled href="https://www.sapo.pt/" type="info" fill="solid">Submit</o-input>
+                </p>
+            </template>
+          </o-demo-case>
+
+
+      <o-demo-case name="Solid input">
+        <template>
+          <script src="/build/o-input.js"></script>
+          <br>
+          <br>
+          <p>
+            <o-input type="default" fill="solid">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="warning" fill="solid">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="error" fill="solid">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="success" fill="solid">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="info" fill="solid">Submit</o-input>
+          </p>
+        </template>
+      </o-demo-case>
+
+      <o-demo-case name="Outline input">
+        <template>
+          <script src="/build/o-input.js"></script>
+          <br>
+          <br>
+          <p>
+            <o-input type="default" fill="outline">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="warning" fill="outline">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="error" fill="outline">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="success" fill="outline">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="info" fill="outline">Submit</o-input>
+          </p>
+        </template>
+      </o-demo-case>
+
+
+      <o-demo-case name="Dashed input">
+        <template>
+          <script src="/build/o-input.js"></script>
+          <br>
+          <br>
+          <p>
+            <o-input type="default" fill="dashed">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="warning" fill="dashed">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="error" fill="dashed">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="success" fill="dashed">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="info" fill="dashed">Submit</o-input>
+          </p>
+        </template>
+      </o-demo-case>
+
+
+      <o-demo-case name="Rounded input">
+        <template>
+          <script src="/build/o-input.js"></script>
+          <br>
+          <br>
+          <p>
+            <o-input type="default" block rounded fill="dashed">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="warning" rounded fill="dashed">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="error" rounded fill="dashed">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="success" rounded fill="dashed">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="info" rounded fill="dashed">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="default" rounded fill="solid">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="warning" rounded fill="solid">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="error" rounded block fill="solid">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="success" rounded fill="solid">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="info" rounded fill="solid">Submit</o-input>
+          </p>
+        </template>
+      </o-demo-case>
+
+
+
+      <o-demo-case name="Disabled input">
+        <template>
+          <script src="/build/o-input.js"></script>
+          <br>
+          <br>
+          <p>
+            <o-input type="default" disabled fill="dashed">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="warning" disabled fill="dashed">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="error" disabled fill="dashed">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="success" disabled fill="dashed">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="info" disabled fill="dashed">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="default" disabled fill="solid">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="warning" disabled fill="solid">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="error" disabled fill="solid">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="success" disabled fill="solid">Submit</o-input>
+          </p>
+          <p>
+            <o-input type="info" disabled fill="solid">Submit</o-input>
+          </p>
+        </template>
+      </o-demo-case>
+
+
+    </o-demo-bar>
+  </body>
+
+</html>

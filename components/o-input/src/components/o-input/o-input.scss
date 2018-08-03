@@ -1,0 +1,22 @@
+:host {
+
+ /* Generic Colors variables*/
+ --o-input-default: #4a627b;
+ --o-input-default-light : #a6b7c9;
+ --o-input-error : #DE350B;
+ --o-input-error-light : #faac99;
+ --o-input-warning:#FFC400;
+ --o-input-info:  #0065FF;
+ --o-input-success:#36B37E;
+
+ /* Size Style variables  & Font Style variables */
+ --o-input-height : 3.5em;
+ --o-input-font-size :14px;
+ --o-input-font-weight : 600;
+ --o-input-font-family : 'San Francisco', -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', 'Helvetica Neue', Helvetica, sans-serif;
+ --o-input-font-color-light : #FFFFFF;
+ --o-input-font-color-dark : #091E42;
+}
+
+
+input{}
