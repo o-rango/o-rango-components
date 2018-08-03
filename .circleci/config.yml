@@ -48,6 +48,9 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - restore_cache: *restore-cache-deps
+      - add_ssh_keys:
+          fingerprints:
+            - "16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48"
       - run:
           name: "Publish O-RANGO Package"
           command: |
