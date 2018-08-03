@@ -51,7 +51,7 @@ jobs:
       - add_ssh_keys
       - run:
           name: "Keyscan Github (HACK)"
-          command: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+          command: ssh -o StrictHostKeyChecking=no github.com
       - run:
           name: "Publish O-RANGO Package"
           command: |
