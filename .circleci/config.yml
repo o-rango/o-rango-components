@@ -49,9 +49,6 @@ jobs:
           at: ~/repo
       - restore_cache: *restore-cache-deps
       - run:
-          name: "Keyscan Github (HACK)"
-          command: ssh -o StrictHostKeyChecking=no github.com
-      - run:
           name: "Publish O-RANGO Package"
           command: |
             if [ -z "$CIRCLE_PULL_REQUEST" ]; then
