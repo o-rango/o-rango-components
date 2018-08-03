@@ -18,6 +18,38 @@
  --o-button-font-color-dark : #091E42;
 }
 
+a{
+  cursor: pointer;
+  transition: background 0.5s;
+  display: inline-block;
+  font-weight:var(--o-button-font-weight);
+  text-align: center;
+  touch-action: manipulation;
+  background-image: none;
+  font-family: var(--o-button-font-family);
+  font-size: var(--o-button-font-size);
+  @each $type in 'default' 'error' 'warning' 'info' 'success' {
+    &.solid-#{$type} {
+      color:var(--o-button-#{$type});
+    }
+    &:hover {
+      filter: contrast(135%);
+    }
+    &:active{
+      filter: contrast(110%);
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    >* {
+    pointer-events: none;
+   }
+    opacity: 0.5;
+  }
+}
 
 button {
   height: 2.5rem;

@@ -36,6 +36,7 @@ declare global {
       'href': string;
       'rounded': boolean;
       'size': string;
+      'target': string;
       'type': string;
     }
   }
@@ -65,6 +66,7 @@ declare global {
       'href'?: string;
       'rounded'?: boolean;
       'size'?: string;
+      'target'?: string;
       'type'?: string;
     }
   }
