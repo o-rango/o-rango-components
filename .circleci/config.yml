@@ -48,9 +48,11 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - restore_cache: *restore-cache-deps
+      - add_ssh_keys
       - run:
-          name: "SSH O-RANGO Package"
-          command: mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+          name: "Keyscan Github (HACK)"
+          command: ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+      - run:
           name: "Publish O-RANGO Package"
           command: |
             if [ -z "$CIRCLE_PULL_REQUEST" ]; then
