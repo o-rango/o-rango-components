@@ -17,5 +17,3 @@ deploy:
   provider: npm
   email: "NPM_EMAIL"
   api_key: "NPM_AUTH_TOKEN"
-script:
-  - npm run publish:$TRAVIS_BRANCH
