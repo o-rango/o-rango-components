@@ -1,6 +1,8 @@
 # @o-rango/button
 Provides feedback messages for  user actions with alert messages.
 
+[![npm version](https://badge.fury.io/js/%40o-rango%2Fo-button.svg)](https://badge.fury.io/js/%40o-rango%2Fo-button)
+
 [![Edit o-button on codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/6yrk93qw23)
 ## Demo
 ![](./docs/o-button_demo.gif)
@@ -20,46 +22,30 @@ or
 
 ### Usage example 
 
-Default Alert
-
+Button usage examples
 ```html
-  // Default Alert
-  <o-button  align="center" type="default">This is an default alert banner !!!!</o-button>
-  // Success Alert aligned left
-  <o-button align="left" type="success">This is an success alert banner</o-button>
-  // Alert using slots 
-  <o-button type="error" align="center">
-          <div slot="start"> Start</div>
-          This is an error alert banner
-          <div slot="end">X</div>
-  </o-button>
+	  <o-button type="default" fill="solid">Submit</o-button>
+		<o-button type="default" disabled fill="solid">Submit</o-button>
+		<o-button type="default" fill="outline">Submit</o-button>
+		<o-button type="default" disabled fill="dashed">Submit</o-button>
+		<o-button type="default" fill="dashed">Submit</o-button>
+		<o-button type="default" disabled fill="outline">Submit</o-button>
+		<o-button type="default" rounded fill="outline">Submit</o-button>
+		<o-button type="default" disabled rounded fill="outline">Submit</o-button>
 ```
-
-
-Alert with Line
-
-```html
-  // Success Alert aligned left
-  <o-button line align="left" type="success">This is an success alert banner</o-button>
-  // Alert using slots 
-  <o-button line type="error" align="center">
-          <div slot="start"> Start</div>
-          This is an error alert banner
-          <div slot="end">X</div>
-  </o-button>
-```
-
-
 
 Properties
 
 ```js
-//o-content-alert
-  @Prop() name?: string;
-  @Prop() align: string = 'center' // left,right,center ;
+//o-button
+  @Prop() size?: string; // lg - md - sm
+  @Prop() href?: string;
+  @Prop({ reflectToAttr: true }) target?: string = '_blank';
+  @Prop() block? : boolean = false;
   @Prop() type: string = 'default' //default, error, warning , info , success;
-  @Prop() line: boolean= false;
-
+  @Prop() rounded?: boolean = false;
+  @Prop({ reflectToAttr: true }) disabled = false;
+  @Prop({ reflectToAttr: true})  fill?: 'dashed' | 'outline' | 'solid' = 'solid';
 ```
 
 
