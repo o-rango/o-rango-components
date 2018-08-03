@@ -1,33 +1,80 @@
+# Fully Inspired by https://github.com/aws-amplify/amplify-js/blob/master/.circleci/config.yml
+
 version: 2
+
+aliases:
+  - &restore-cache-deps
+      keys: - v1-dependencies-{{ checksum "package.json" }}
+             # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+  - &save-cache-deps
+      key: - v1-dependencies-{{ checksum "package.json" }}
+      paths:
+        - node_modules
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:10-browsers
+      environment:
+          ## this enables colors in the output
+          TERM: xterm
+
 jobs:
   build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:10-browsers
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
-
+    <<: *defaults
     steps:
       - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
+      - restore_cache: *restore-cache-deps
+      - run: npm install npm@latest
       - run: npm install
-
-      - save_cache:
+      - run: npm run init
+      - save_cache: *save-cache-deps
+      - run: npm run build
+      - persist_to_workspace:
+          root: ~/repo
           paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-        
-      # run tests!
+            - "*"        
+  unit_test:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run: npm run build --prod
       - run: npm run test:ci
+      - run: npm run coverage
+  deploy:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - restore_cache: *restore-cache-deps
+      - run:
+          name: "Publish O-RANGO Package"
+          command: |
+            if [ -z "$CIRCLE_PULL_REQUEST" ]; then
+              echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ~/.npmrc
+              git config --global user.email $GITHUB_EMAIL
+              git config --global user.name $GITHUB_USER
+              npm run publish:$CIRCLE_BRANCH
+            else
+              echo "Skipping deploy."
+            fi
+workflows:
+  version: 2
+  build_test_deploy:
+    jobs:
+      - build
+      - unit_test:
+          requires:
+            - build
+
+      - deploy:
+          filters:
+            branches:
+              only:
+                - release
+                - master
+          requires:
+            - unit_test
