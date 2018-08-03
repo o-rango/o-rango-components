@@ -30,14 +30,31 @@ declare global {
 
   namespace StencilComponents {
     interface OInput {
+      'autoComplete': any;
+      'autoFocus': any;
       'block': boolean;
       'disabled': boolean;
       'fill': 'dashed' | 'outline' | 'solid';
-      'href': string;
+      'form': any;
+      'innerRef': any;
+      'max': any;
+      'maxLength': any;
+      'min': any;
+      'name': any;
+      'onBlur': any;
+      'onChange': any;
+      'onFocus': any;
+      'onKeyDown': any;
+      'onKeyPress': any;
+      'onKeyUp': any;
+      'pattern': any;
+      'placeholder': any;
+      'readOnly': any;
+      'required': any;
       'rounded': boolean;
-      'size': string;
-      'target': string;
-      'type': string;
+      'spellCheck': any;
+      'type': any;
+      'value': any;
     }
   }
 
@@ -60,14 +77,31 @@ declare global {
   }
   namespace JSXElements {
     export interface OInputAttributes extends HTMLAttributes {
+      'autoComplete'?: any;
+      'autoFocus'?: any;
       'block'?: boolean;
       'disabled'?: boolean;
       'fill'?: 'dashed' | 'outline' | 'solid';
-      'href'?: string;
+      'form'?: any;
+      'innerRef'?: any;
+      'max'?: any;
+      'maxLength'?: any;
+      'min'?: any;
+      'name'?: any;
+      'onBlur'?: any;
+      'onChange'?: any;
+      'onFocus'?: any;
+      'onKeyDown'?: any;
+      'onKeyPress'?: any;
+      'onKeyUp'?: any;
+      'pattern'?: any;
+      'placeholder'?: any;
+      'readOnly'?: any;
+      'required'?: any;
       'rounded'?: boolean;
-      'size'?: string;
-      'target'?: string;
-      'type'?: string;
+      'spellCheck'?: any;
+      'type'?: any;
+      'value'?: any;
     }
   }
 }

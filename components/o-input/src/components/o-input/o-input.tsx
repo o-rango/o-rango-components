@@ -9,48 +9,66 @@ import { Component,Prop} from '@stencil/core';
 })
 
 
-export class OButtonComponent {
-  @Prop() size?: string; // lg - md - sm
-  @Prop() href?: string;
-  @Prop({ reflectToAttr: true }) target?: string = '_blank';
+export class OInputComponent {
+
+  @Prop() autoComplete: any; // lg - md - sm
+  @Prop() autoFocus: any;
+  @Prop() form:any;
+  @Prop() innerRef:any;
+  @Prop() maxLength:any;
+  @Prop() min:any;
+  @Prop() max:any;
+  @Prop() name:any;
+  @Prop() onBlur:any;
+  @Prop() onChange:any;
+  @Prop() onFocus:any;
+  @Prop() onKeyDown:any;
+  @Prop() onKeyPress:any;
+  @Prop() onKeyUp:any;
+  @Prop() pattern:any;
+  @Prop() placeholder:any;
+  @Prop() readOnly:any;
+  @Prop() required:any;
+  @Prop() spellCheck:any;
+  @Prop() type:any;
+  @Prop() value:any;
+
+
+  @Prop({ reflectToAttr: true }) disabled : boolean = false
+
   @Prop() block? : boolean = false;
-  @Prop() type: string = 'default' //default, error, warning , info , success;
+ // @Prop() type: string = 'default' //default, error, warning , info , success;
   @Prop() rounded?: boolean = false;
-  @Prop({ reflectToAttr: true }) disabled = false;
+
   @Prop({ reflectToAttr: true})  fill?: 'dashed' | 'outline' | 'solid' = 'solid';
 
 
-
-  onFocus() {
-    console.log('Focus');
-  }
-
-  onKeyUp() {
-    console.log('KeyUp');
-  }
-
-  onBlur() {
-    console.log('Blur');
-  }
-
-  onClick() {
-    console.log('Click');
-  }
-
   render() {
-    const TagType = this.href ? 'a' : 'button';
-    const attrs = (TagType === 'button') ? { type: this.type } : { href: this.href , target: this.target };
-
-    const cssClassName =  `${this.fill}-${this.type}`;
-
-    const cssClasses : CssClassMap = {
-          'block' : this.block,
-          'rounded' : this.rounded,
-          [cssClassName] : true
-    }
 
     return (
-        <input/>
+        <input
+        autoComplete={this.autoComplete}
+        autoFocus={this.autoFocus}
+        disabled={this.disabled}
+        form={this.form}
+        maxLength={this.maxLength}
+        min={this.min}
+        max={this.max}
+        name={this.name}
+        onBlur={this.onBlur}
+        onChange={this.onChange}
+        onFocus={this.onFocus}
+        onKeyDown={this.onKeyDown}
+        onKeyPress={this.onKeyPress}
+        onKeyUp={this.onKeyUp}
+        pattern={this.pattern}
+        placeholder={this.placeholder}
+        readOnly={this.readOnly}
+        required={this.required}
+        spellCheck={this.spellCheck}
+        type={this.type}
+        value={this.value}
+        />
     );
   }
 }

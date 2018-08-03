@@ -11,7 +11,7 @@
 
  /* Size Style variables  & Font Style variables */
  --o-input-height : 3.5em;
- --o-input-font-size :14px;
+ --o-input-font-size :1.3em;
  --o-input-font-weight : 600;
  --o-input-font-family : 'San Francisco', -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', 'Helvetica Neue', Helvetica, sans-serif;
  --o-input-font-color-light : #FFFFFF;
@@ -19,4 +19,46 @@
 }
 
 
-input{}
+input{
+  background-color:var( --o-input-default-light) ;
+  border: 1px;
+  cursor: inherit;
+  font-family: inherit;
+  font-size: var(--o-input-font-size);
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  min-width: 300px;
+  color: var(--o-input-default);
+  border: none;
+  box-shadow: 0 1px 0 0 var(--o-input-default);
+  order: 2;
+  border-bottom: 1px solid transparent;
+
+
+  &::-ms-clear {
+    display: none;
+  }
+
+  &:invalid {
+    box-shadow: none;
+  }
+
+  &::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: var( --o-input-default-light);
+  }
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: var( --o-input-default-light);
+    opacity: 1;
+  }
+  &::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: var( --o-input-default-light);
+  }
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: var( --o-input-default-light);
+  }
+}
