@@ -48,7 +48,6 @@ jobs:
       - attach_workspace:
           at: ~/repo
       - restore_cache: *restore-cache-deps
-      - add_ssh_keys
       - run:
           name: "Keyscan Github (HACK)"
           command: ssh -o StrictHostKeyChecking=no github.com
