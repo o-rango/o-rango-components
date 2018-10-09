@@ -16,6 +16,6 @@
   },
   "devDependencies": {
     "codecov": "^3.0.4",
-    "lerna": "^3.0.0-rc.0"
+    "lerna": "^3.4.2"
   }
 }
