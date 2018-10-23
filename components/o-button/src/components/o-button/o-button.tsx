@@ -1,6 +1,10 @@
+
 // Hack For CssClassMap
-export type CssClassMap = { [className: string]: boolean };
-import { Component,Prop} from '@stencil/core';
+declare type CssClassMap = { [className: string]: boolean };
+import { Component , Prop} from '@stencil/core';
+
+
+
 
 @Component({
   tag: 'o-button',

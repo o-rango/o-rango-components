@@ -1,5 +1,5 @@
 // Hack For CssClassMap
-export type CssClassMap = { [className: string]: boolean };
+declare type CssClassMap = { [className: string]: boolean };
 import { Component , Prop} from '@stencil/core';
 
 @Component({
@@ -8,7 +8,7 @@ import { Component , Prop} from '@stencil/core';
   shadow: true
 })
 export class OAlertComponent {
-  @Prop() id?: string;
+  @Prop() alertId?: string;
   @Prop() align: string = 'center' // left,right,center ;
   @Prop() type: string = 'default' //default, error, warning , info , success;
   @Prop() line: boolean= false;
@@ -33,7 +33,7 @@ export class OAlertComponent {
     }
 
     return (
-      <div id={this.id} class={typeClasses} role="alert">
+      <div id={this.alertId} class={typeClasses} role="alert">
             <slot name="start"></slot>
             <span class={alignClasses}><slot></slot></span>
             <slot name="end"></slot>

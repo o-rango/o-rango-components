@@ -19,7 +19,12 @@
     "@commitlint/config-conventional": "^7.1.2",
     "codecov": "^3.1.0",
     "husky": "^1.1.2",
-    "lerna": "^3.4.3"
+    "lerna": "^3.4.3",
+    "@stencil/core": "^0.14.2",
+    "@stencil/postcss": "^0.1.0",
+    "@stencil/sass": "0.1.1",
+    "@types/jest": "^23.3.1",
+    "autoprefixer": "^9.0.2"
   },
   "commitlint": {
     "extends": [

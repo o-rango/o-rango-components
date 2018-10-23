@@ -3,10 +3,14 @@
   "packages": [
     "components/*"
   ],
-  "commands": {
+  "command": {
     "publish": {
-      "conventionalCommits": true
-    },
+      "conventionalCommits": true,
+      "ignoreChanges": [
+        "ignored-file",
+        "*.md"
+      ]
+    },  
     "bootstrap": {
       "hoist": true,
       "npmClientArgs": ["--no-package-lock"]
