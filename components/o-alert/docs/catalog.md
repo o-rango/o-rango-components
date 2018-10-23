@@ -1,11 +1,8 @@
 # @o-rango/o-alert
 Provides feedback messages for  user actions with alert messages.
 
-[![npm version](https://badge.fury.io/js/%40o-rango%2Fo-alert.svg)](https://badge.fury.io/js/%40o-rango%2Fo-alert)
 
-[![Edit o-alert codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/n7m2y31n44)
-
-## Get Started 
+## Install
 First, npm install within the project or use it directly from CDN:
 
 ```
@@ -13,16 +10,16 @@ npm install @o-rango/o-alert --save
 ```
 
 ```code
+lang: html
+---
 <script src="./node_modules/@o-rango/o-alert/dist/o-alert.js"></script>
 // OR
 <script src="https://unpkg.com/@o-rango/o-alert/dist/o-alert.js"></script>
 ```
 
-## o-alert
-The HTML specimen allows the documentation of HTML as well as JavaScript and CSS based views.
+## Usage
 
-
-## HTML 
+Demo with line
 
 ```html
 
@@ -33,9 +30,22 @@ The HTML specimen allows the documentation of HTML as well as JavaScript and CSS
 					<o-alert line type="warning">This is an warning alert banner</o-alert>
 					<br>
 					<o-alert line type="error" align="center">
-						<div slot="start"> Start</div>
-						Error Banner
-						<div slot="end">X</div>
+             Error
+					</o-alert>
+```
+
+Demo simple styles
+
+```html
+
+					<o-alert  align="left" type="success">This is an success alert banner</o-alert>
+					<br>
+					<o-alert  type="info">This is an success info alert banner</o-alert>
+					<br>
+					<o-alert  type="warning">This is an warning alert banner</o-alert>
+					<br>
+					<o-alert  type="error" align="center">
+            Error
 					</o-alert>
 ```
 
@@ -43,18 +53,20 @@ The HTML specimen allows the documentation of HTML as well as JavaScript and CSS
 ### Properties
 
 ```code
-//o-content-alert
+lang: js
+---
   @Prop() name?: string;
   @Prop() align: string = 'center' // left,right,center ;
   @Prop() type: string = 'default' //default, error, warning , info , success;
   @Prop() line: boolean= false;
-
 ```
 
 
-### Customization 
+### Customization
 
 ```code
+lang: css
+---
  /* Generic Colors variables*/
  --o-alert-default: #FAFBFC;
  --o-alert-error : #DE350B;

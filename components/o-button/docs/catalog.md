@@ -1,29 +1,27 @@
 # @o-rango/button
-Provides feedback messages for  user actions with alert messages.
+Provides set of buttons as ui web components.
 
-[![npm version](https://badge.fury.io/js/%40o-rango%2Fo-button.svg)](https://badge.fury.io/js/%40o-rango%2Fo-button)
-
-[![Edit o-button on codesandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/6yrk93qw23)
-## Demo
-![](./docs/o-button_demo.gif)
-
-## Get Started 
+## Install
 First, npm install within the project or use it directly from CDN:
 
 ```
 npm install @o-rango/o-button --save
 ```
 ```code
+lang: html
+---
 <script src="./node_modules/@o-rango/o-button/dist/o-button.js"></script>
 // OR
 <script src="https://unpkg.com/@o-rango/o-button/dist/o-button.js"></script>
 ```
 
-### Usage example 
+## Usage
 
-Button usage examples
+Random buttons
+
 ```html
-	<script src="https://unpkg.com/@o-rango/o-alert/dist/o-alert.js"></script>
+
+
 
 	  <o-button type="default" fill="solid">Submit</o-button>
 		<o-button type="default" disabled fill="solid">Submit</o-button>
@@ -32,13 +30,81 @@ Button usage examples
 		<o-button type="default" fill="dashed">Submit</o-button>
 		<o-button type="default" disabled fill="outline">Submit</o-button>
 		<o-button type="default" rounded fill="outline">Submit</o-button>
-		<o-button type="default" disabled rounded fill="outline">Submit</o-button>
+    <o-button type="default" disabled rounded fill="outline">Submit</o-button>
+    <br>
+        <o-button type="default" fill="solid">Submit</o-button>
+          
+          
+            <o-button type="warning" fill="solid">Submit</o-button>
+          
+          
+            <o-button type="error" fill="solid">Submit</o-button>
+          
+          
+            <o-button type="success" fill="solid">Submit</o-button>
+          
+          
+            <o-button type="info" fill="solid">Submit</o-button>
+    <br>
+     
+            <o-button type="default" fill="outline">Submit</o-button>
+          
+          
+            <o-button type="warning" fill="outline">Submit</o-button>
+          
+          
+            <o-button type="error" fill="outline">Submit</o-button>
+          
+          
+            <o-button type="success" fill="outline">Submit</o-button>
+          
+          
+            <o-button type="info" fill="outline">Submit</o-button>
+          
+
 ```
 
-Properties
+Rounded buttons
+
+```html
+  <p>
+            <o-button type="default" block="" rounded="" fill="dashed">Submit</o-button>
+          
+          <p>
+            <o-button type="warning" rounded="" fill="dashed">Submit</o-button>
+          
+          <p>
+            <o-button type="error" rounded="" fill="dashed">Submit</o-button>
+          
+          <p>
+            <o-button type="success" rounded="" fill="dashed">Submit</o-button>
+          
+          <p>
+            <o-button type="info" rounded="" fill="dashed">Submit</o-button>
+          
+          <p>
+            <o-button type="default" rounded="" fill="solid">Submit</o-button>
+          
+          <p>
+            <o-button type="warning" rounded="" fill="solid">Submit</o-button>
+          
+          <p>
+            <o-button type="error" rounded="" block="" fill="solid">Submit</o-button>
+          
+          <p>
+            <o-button type="success" rounded="" fill="solid">Submit</o-button>
+          
+          <p>
+            <o-button type="info" rounded="" fill="solid">Submit</o-button>
+          
+```
+
+
+### Properties
 
 ```code
-//o-button
+lang: js
+---
   @Prop() size?: string; // lg - md - sm
   @Prop() href?: string;
   @Prop({ reflectToAttr: true }) target?: string = '_blank';
@@ -53,6 +119,8 @@ Properties
 
 
 ```code
+lang: css
+---
  /* Generic Colors variables*/
  --o-button-default: #FAFBFC;
  --o-button-error : #DE350B;
