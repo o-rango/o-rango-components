@@ -27,10 +27,6 @@
     "autoprefixer": "^9.0.2",
     "jest": "^23.4.2"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ionic-team/stencil-component-starter.git"
-  },
   "author": "@o-rango",
   "license": "MIT",
   "homepage": "https://o-rango.github.io/",
