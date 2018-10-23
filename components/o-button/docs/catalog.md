@@ -23,6 +23,8 @@ npm install @o-rango/o-button --save
 
 Button usage examples
 ```html
+	<script src="https://unpkg.com/@o-rango/o-alert/dist/o-alert.js"></script>
+
 	  <o-button type="default" fill="solid">Submit</o-button>
 		<o-button type="default" disabled fill="solid">Submit</o-button>
 		<o-button type="default" fill="outline">Submit</o-button>

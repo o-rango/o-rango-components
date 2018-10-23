@@ -16,13 +16,11 @@ const pages = [
     title: "UI components",
     pages: [
       { 
-        scripts : ['https://unpkg.com/@o-rango/o-alert@0.1.0/dist/o-alert.js'],
         path: "components/o-alert",
         title: "o-alert",
         content:mkLoader("o-alert/docs/catalog")
       },
       {
-        scripts : ['https://unpkg.com/@o-rango/o-button@0.0.1-beta.3/dist/o-button.js'],
         path: "components/o-button",
         title: "o-button",
         content:mkLoader("o-button/docs/catalog")

@@ -21,6 +21,9 @@ npm install @o-rango/o-alert --save
 ## o-alert
 The HTML specimen allows the documentation of HTML as well as JavaScript and CSS based views.
 
+
+## HTML 
+
 ```html
 
 					<o-alert line align="left" type="success">This is an success alert banner</o-alert>
@@ -35,6 +38,7 @@ The HTML specimen allows the documentation of HTML as well as JavaScript and CSS
 						<div slot="end">X</div>
 					</o-alert>
 ```
+
 
 ### Properties
 
