@@ -10,9 +10,9 @@
     "build": "lerna --concurrency 1 exec npm run build",
     "format": "lerna run -- format",
     "lint": "lerna run -- lint",
-    "publish:master": "lerna publish --conventional-commits --cd-version=prerelease --yes  --npm-tag=unstable --preid=unstable --message 'ci: Publish [ci skip]'",
-    "publish:beta": "lerna publish --conventional-commits --cd-version=prerelease --yes  --npm-tag=beta --preid=beta --no-verify --message 'ci: Publish [ci skip] '",
-    "publish:release": "lerna publish --conventional-commits --cd-version=patch --yes  --message 'ci: Publish [ci skip]'"
+    "publish:master": "lerna publish --conventional-commits --cd-version=prerelease --yes  --npm-tag=unstable --preid=unstable --message 'ci: publish [ci skip]'",
+    "publish:beta": "lerna publish --conventional-commits --cd-version=prerelease --yes  --npm-tag=beta --preid=beta --message 'ci: publish [ci skip] '",
+    "publish:release": "lerna publish --conventional-commits --cd-version=patch --yes  --message 'ci: publish [ci skip]'"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.2.1",
@@ -30,7 +30,5 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  },
-  "husky": {
   }
 }
