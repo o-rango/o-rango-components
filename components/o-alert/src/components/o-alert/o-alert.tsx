@@ -14,6 +14,7 @@ export class OAlertComponent {
   @Prop() line: boolean= false;
 
 
+
   render() {
     const types = ['info', 'success','error','default','warning'];
 
