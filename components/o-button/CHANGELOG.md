@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.1-beta.0 (2018-10-23)
+
+
+### Features
+
+* **o-button:** add block size ([49bc174](https://github.com/ionic-team/stencil-component-starter/commit/49bc174))
+* **o-button:** added initial version of o-button ([6127e66](https://github.com/ionic-team/stencil-component-starter/commit/6127e66))
+* **o-button:** added rounded version ([0d217d0](https://github.com/ionic-team/stencil-component-starter/commit/0d217d0))
+* catalog add catalog ([1a28e2e](https://github.com/ionic-team/stencil-component-starter/commit/1a28e2e))
+
+
+
+
+
 # [0.2.0](https://github.com/ionic-team/stencil-component-starter/compare/@o-rango/o-button@0.0.1-beta.2...@o-rango/o-button@0.2.0) (2018-10-23)
 
 
