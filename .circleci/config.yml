@@ -4,10 +4,10 @@ version: 2
 
 aliases:
   - &restore-cache-deps
-      key: v1-dependencies-{{ checksum "package.json" }}
+      key: v1-dependencies-update{{ checksum "package.json" }}
    
   - &save-cache-deps
-      key: v1-dependencies-{{ checksum "package.json" }}
+      key: v1-dependencies-update{{ checksum "package.json" }}
       paths:
         - node_modules
 
