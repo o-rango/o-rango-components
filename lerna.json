@@ -1,6 +1,12 @@
-{
+{ 
+  "version": "independent",
   "packages": [
     "components/*"
   ],
-  "version": "independent"
+  "commands": {
+    "bootstrap": {
+      "hoist": true,
+      "npmClientArgs": ["--no-package-lock"]
+    }
+  }
 }
