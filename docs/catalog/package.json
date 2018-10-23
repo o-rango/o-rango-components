@@ -7,7 +7,7 @@
     "react-dom": "^16.5.2"
   },
   "scripts": {
-    "catalog-start": "catalog start",
-    "catalog-build": "catalog build"
+    "start": "catalog start",
+    "build": "catalog build"
   }
 }
