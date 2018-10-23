@@ -25,6 +25,7 @@ jobs:
     steps:
       - checkout
       - run: npm install npm@latest
+      - run: npm install -g lerna
       - run: npm install
       - run: npm ci
       - run: npm run init
