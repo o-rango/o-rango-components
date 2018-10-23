@@ -2,6 +2,7 @@
   "name": "o-rango-components",
   "private": true,
   "scripts": {
+    "commitmsg": "commitlint -e $GIT_PARAMS",
     "init": "lerna bootstrap",
     "clean": "lerna run -- clean",
     "test:ci": "lerna --concurrency 1 exec npm run test:ci",
@@ -15,7 +16,15 @@
     "publish:release": "lerna publish --conventional-commits --cd-version=patch --yes  --message 'chore(release): Publish [ci skip]'"
   },
   "devDependencies": {
+    "@commitlint/cli": "^7.2.1",
+    "@commitlint/config-conventional": "^7.1.2",
     "codecov": "^3.1.0",
+    "husky": "^1.1.2",
     "lerna": "^3.4.3"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }

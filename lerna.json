@@ -4,6 +4,9 @@
     "components/*"
   ],
   "commands": {
+    "publish": {
+      "conventionalCommits": true
+    },
     "bootstrap": {
       "hoist": true,
       "npmClientArgs": ["--no-package-lock"]
