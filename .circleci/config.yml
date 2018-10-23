@@ -28,7 +28,7 @@ jobs:
       - run: rm -rf node_modules/
       - run: npm install npm@latest
       - run: npm install
-      - run: lerna clean --yes
+      - run: npx lerna clean --yes
       - run: npm run init
       - save_cache: *save-cache-deps
       - run: npm run build
