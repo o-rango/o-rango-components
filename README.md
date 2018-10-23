@@ -1,4 +1,4 @@
-![](./docs/img/logo-orango.svg)
+![](./logo-orango.svg)
 
 # UI Components Monorepo
 [![Build Status](https://travis-ci.org/o-rango/o-rango-components.svg?branch=master)](https://travis-ci.org/o-rango/o-rango-components)
