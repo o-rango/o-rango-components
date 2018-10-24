@@ -45,5 +45,8 @@
       "jsx"
     ]
   },
-  "gitHead": "2936be651042bb20b998bc8bf40418799b604317"
+  "gitHead": "2936be651042bb20b998bc8bf40418799b604317",
+  "dependencies": {
+    "@stencil/core": "0.15.0-0"
+  }
 }
