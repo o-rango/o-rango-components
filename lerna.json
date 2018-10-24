@@ -1,6 +1,7 @@
 { 
   "version": "independent",
   "packages": [
+    "apps/*",
     "components/*"
   ],
   "command": {
@@ -12,7 +13,7 @@
       ]
     },  
     "bootstrap": {
-      "hoist": true,
+      "hoist": false,
       "npmClientArgs": ["--no-package-lock"]
     }
   }
