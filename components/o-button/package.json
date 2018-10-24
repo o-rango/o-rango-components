@@ -20,7 +20,7 @@
     "test.watch": "jest --watch"
   },
   "devDependencies": {
-    "@stencil/core": "^0.14.2",
+    "@stencil/core": "0.15.0-0",
     "@stencil/postcss": "^0.1.0",
     "@stencil/sass": "0.1.1",
     "@types/jest": "^23.3.1",
@@ -45,8 +45,5 @@
       "jsx"
     ]
   },
-  "gitHead": "2936be651042bb20b998bc8bf40418799b604317",
-  "dependencies": {
-    "@stencil/core": "0.15.0-0"
-  }
+  "gitHead": "2936be651042bb20b998bc8bf40418799b604317"
 }
