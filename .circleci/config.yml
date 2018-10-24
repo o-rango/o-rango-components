@@ -25,10 +25,7 @@ jobs:
     steps:
       - checkout
       - run: npm install npm@latest
-      - run: npm install -g lerna
-      - run: lerna bootstrap
-      - run: npm ci
-      - run: npm run init
+      - run: npx lerna bootstrap
       - run: npm run build
       - persist_to_workspace:
           root: ~/repo
