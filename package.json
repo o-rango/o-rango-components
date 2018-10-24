@@ -28,5 +28,6 @@
     "extends": [
       "@commitlint/config-conventional"
     ]
-  }
+  },
+  "preinstall": "npm config set package-lock false"
 }
