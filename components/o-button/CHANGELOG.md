@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.2](https://github.com/o-rango/o-rango-components/compare/@o-rango/o-button@0.2.1...@o-rango/o-button@0.2.2) (2018-10-25)
+
+
+### Bug Fixes
+
+*  remove package.locks ([e9749df](https://github.com/o-rango/o-rango-components/commit/e9749df))
+
+
+
+
+
 ## [0.2.1](https://github.com/o-rango/o-rango-components/compare/@o-rango/o-button@0.2.1-beta.1...@o-rango/o-button@0.2.1) (2018-10-23)
 
 **Note:** Version bump only for package @o-rango/o-button
