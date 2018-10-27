@@ -20,7 +20,7 @@
     "codecov": "^3.1.0",
     "husky": "^1.1.2",
     "lerna": "^3.4.3",
-    "@types/jest": "^23.3.1",
+    "@types/jest": "^23.3.8",
     "autoprefixer": "^9.0.2"
   },
   "commitlint": {
