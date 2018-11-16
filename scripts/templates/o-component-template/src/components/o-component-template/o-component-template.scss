@@ -1,0 +1,85 @@
+:host {
+  --o-component-template-global-background-color: #FAFBFC;
+ /* Generic Colors variables*/
+ --o-component-template-default: #4a627b;
+ --o-component-template-error : #DE350B;
+ --o-component-template-warning:#FFC400;
+ --o-component-template-info:  #0065FF;
+ --o-component-template-success:#36B37E;
+
+ /* Size Style variables  & Font Style variables */
+ --o-component-template-height : 3.5em;
+ --o-component-template-font-size :14px;
+ --o-component-template-font-weight : 600;
+ --o-component-template-font-family : 'San Francisco', -apple-system, BlinkMacSystemFont, '.SFNSText-Regular', 'Helvetica Neue', Helvetica, sans-serif;
+ --o-component-template-font-color-light : #FFFFFF;
+ --o-component-template-font-color-dark : #091E42;
+}
+
+::slotted([slot=start]) {
+  order: 0;
+  position: absolute;
+  left: 1em;
+
+}
+::slotted([slot=end]) {
+  order: 3;
+  position: absolute;
+  right: 1em;
+}
+
+.wrap {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 1em 0 1em;
+}
+
+.o-component-template {
+  display: flex;
+  flex-flow: row wrap;
+  align-items:center;
+  width: 100%;
+  height: var(--o-component-template-height);
+  box-shadow: rgba(67, 90, 111, 0.135) 0px 0px 0px 1px inset;
+  font-weight: var(--o-component-template-font-weight);
+  font-family: var( --o-component-template-font-family);
+  font-size: var( --o-component-template-font-size);
+  transition: color 0.25s ease-in-out 0s;
+  text-align: center;
+  background-color:  var(--o-component-template-global-background-color);
+
+  .o-component-template-align-center{
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+  }
+  .o-component-template-align-left{
+    justify-content:flex-start;
+    text-align: left;
+  }
+}
+
+.o-component-template-text-light {
+  color : var(--o-component-template-font-color-light);
+}
+.o-component-template-text-dark {
+  color : var(--o-component-template-font-color-dark);
+}
+
+@each $type in 'default' 'error' 'warning' 'info' 'success' {
+  .o-component-template-line-#{$type}:before {
+    content: "";
+    width: 0.3em;
+    height: var(--o-component-template-height);
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color:  var(--o-component-template-#{$type});
+  }
+  .o-component-template-#{$type} {
+    background-color:  var(--o-component-template-#{$type});
+  }
+}
+
+

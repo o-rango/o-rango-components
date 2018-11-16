@@ -2,6 +2,7 @@
   "name": "o-rango-components",
   "private": true,
   "scripts": {
+    "generate": "node ./scripts/runners/generator.js",
     "init": "lerna bootstrap",
     "clean": "lerna run -- clean",
     "test:ci": "lerna --concurrency 1 exec npm run test:ci",
@@ -21,7 +22,14 @@
     "husky": "^1.1.2",
     "lerna": "^3.4.3",
     "@types/jest": "^23.3.1",
-    "autoprefixer": "^9.0.2"
+    "autoprefixer": "^9.0.2",
+    "chalk": "^2.4.1",
+    "minimist": "^1.2.0",
+    "node-emoji": "^1.8.1",
+    "through2": "^2.0.3",
+    "recursive-copy": "^2.0.9",
+    "validate-element-name": "^2.1.1",
+    "minimist-options": "^3.0.2"
   },
   "commitlint": {
     "extends": [

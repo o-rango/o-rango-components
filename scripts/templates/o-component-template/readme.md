@@ -1,0 +1,1 @@
+# @o-rango/o-component-template
