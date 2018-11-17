@@ -13,11 +13,9 @@
 
 
 
-
-
 # Roadmap of Components
 
 | Component        | Status           | Sandbox                                               |
 | ---------------- |:----------------:| -----------------------------------------------------:|
-| o-alert          | :construction:   | [:link:](https://codesandbox.io/s/n7m2y31n44)         |
-| o-button         | :construction:   | [:link:](https://codesandbox.io/s/6yrk93qw23)                                                      |
+| o-alert          | :construction:   | [:link:](https://bit.ly/2A3b9bc)                      |
+| o-button         | :construction:   | [:link:](https://bit.ly/2TfLULT)                      |
