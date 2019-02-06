@@ -27,7 +27,7 @@
     "minimist": "^1.2.0",
     "node-emoji": "^1.8.1",
     "through2": "^2.0.3",
-    "recursive-copy": "^2.0.9",
+    "recursive-copy": "2.0.9",
     "validate-element-name": "^2.1.1",
     "minimist-options": "^3.0.2"
   },
