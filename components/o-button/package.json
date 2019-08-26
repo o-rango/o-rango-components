@@ -20,7 +20,7 @@
     "test.watch": "jest --watch"
   },
   "devDependencies": {
-    "@stencil/core": "0.15.0-0",
+    "@stencil/core": "1.3.2",
     "@stencil/postcss": "^0.1.0",
     "@stencil/sass": "0.1.1",
     "@types/jest": "^23.3.1",
