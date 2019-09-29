@@ -29,7 +29,7 @@
     "through2": "^2.0.3",
     "recursive-copy": "^2.0.9",
     "validate-element-name": "^2.1.1",
-    "minimist-options": "^3.0.2"
+    "minimist-options": "^4.0.2"
   },
   "commitlint": {
     "extends": [
