@@ -21,7 +21,7 @@
     "codecov": "^3.1.0",
     "husky": "^1.1.2",
     "lerna": "^3.4.3",
-    "@types/jest": "^23.3.1",
+    "@types/jest": "^24.0.23",
     "autoprefixer": "^9.0.2",
     "chalk": "^2.4.1",
     "minimist": "^1.2.0",
