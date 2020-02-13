@@ -19,7 +19,7 @@
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
     "codecov": "^3.1.0",
-    "husky": "^1.1.2",
+    "husky": "^4.2.3",
     "lerna": "^3.4.3",
     "@types/jest": "^23.3.1",
     "autoprefixer": "^9.0.2",
