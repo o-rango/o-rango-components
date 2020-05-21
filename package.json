@@ -16,7 +16,7 @@
     "publish:release": "lerna publish --conventional-commits --cd-version=patch --yes  --message 'ci: publish [ci skip]'"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.1.0",
+    "@commitlint/cli": "^8.3.5",
     "@commitlint/config-conventional": "^8.1.0",
     "codecov": "^3.1.0",
     "husky": "^1.1.2",
